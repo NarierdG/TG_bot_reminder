@@ -20,6 +20,7 @@ def start(message):
     bot.send_message(message.chat.id,
                      text="HI, {0.first_name}! I am here to remind you of your plan.".format(
                          message.from_user), reply_markup=markup)
+
 @bot.message_handler(content_types=['text'])
 def main_func(message):
     if (message.text == "Add reminder"): addreminder(message)
