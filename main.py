@@ -113,6 +113,7 @@ def update_database():
         time.sleep(50)
 
 
+# создаем тред для базы данных
 thread = threading.Thread(target=update_database)
 thread.start()
 
